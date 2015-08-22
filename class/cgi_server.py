@@ -8,7 +8,7 @@ PORT = 80
 server = BaseHTTPServer.HTTPServer
 handler = CGIHTTPServer.CGIHTTPRequestHandler
 server_address = ("", PORT)
-handler.cgi_directories = ["/"]
+handler.cgi_directories = ["/cgi-bin"]
 
 httpd = server(server_address, handler)
 print "serving at port", PORT
